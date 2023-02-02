@@ -4672,4 +4672,4 @@ const modifyTracks = (input) => {
     return result;
 }
 
-modifyTracks(input);
+console.log(modifyTracks(input));

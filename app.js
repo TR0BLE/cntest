@@ -4672,4 +4672,12 @@ const modifyTracks = (input) => {
     return result;
 }
 
-console.log(modifyTracks(input));
+const downloadFile = () => {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(modifyTracks(input)));
+    const dlAnchorElem = document.getElementById('downloadAnchorElem');
+    dlAnchorElem.setAttribute("href", dataStr);
+    dlAnchorElem.setAttribute("download", "my_formatted_tracks.json");
+    dlAnchorElem.click();
+}
+
+downloadFile()
